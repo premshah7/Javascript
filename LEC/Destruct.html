@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+		//destructuring using objects{}
+		stuDetails = {
+			name:'Prem',
+			age: 12,
+			mobile: 98765421,
+			roll:1212,
+			enroll:123456789,
+			enail:'asd@gmail.com'
+		}
+		let{name,email,roll} = stuDetails;
+		console.log(name);
+
+
+		//destructuring using array[]
+		//in array calling sequnece must be followed;
+		spi = [2,5,6,3,2,8,6,2.2];
+		let [first, second, third] = spi;
+		console.log(second);
+	</script>
+</body>
+</html>

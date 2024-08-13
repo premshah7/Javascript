@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prime in range</title>
+</head>
+<body>
+    <script>
+        let n = Number(prompt("enter starting number : "));
+        let n1 = Number(prompt("enter ending number : "));
+        let c=0,c1=0;
+        for(i=n;i<=n1;i++){
+            for(p=1;p<=i;p++){
+                if(i%p==0){
+                    c++;
+                }
+            }
+            if(c==2){
+                document.write(i+"<br>");
+                c1++;
+            }
+            c=0;
+    }
+    </script>    
+</body>
+</html>

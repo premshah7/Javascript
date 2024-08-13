@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Click 2</title>
+    <style>
+    </style>
+</head>
+<body>
+    <h1 onmouseover="over()" onmouseout="bye()">Move your cursor here</h1>
+    <button onclick="date()"  >Click here to see the date</button><br>
+    <span id="date"></span>
+    <button onclick="green()">Green Button</button><br>
+    <button onclick="red()">Red Button</button><br>
+
+    <script>
+        function over() {
+            document.body.style.backgroundColor = 'yellow'
+            document.body.style.color = 'black'
+        }
+        function bye() {
+            document.body.style.backgroundColor = 'black'
+            document.body.style.color = 'white'
+        }
+        function date() {
+            document.getElementById('date').innerHTML = new Date()
+        }
+        function green() {
+            document.body.style.backgroundColor = 'green'
+        }
+        function red() {
+            document.body.style.backgroundColor = 'red'
+        }
+    </script>
+</body>
+</html>

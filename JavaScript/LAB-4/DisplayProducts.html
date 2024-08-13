@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display Products</title>
+</head>
+<body>
+    <script>
+        let prod = [
+        
+  {
+    "name": "Emilio Gottlieb",
+    "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/681.jpg",
+    "id": "1"
+  },
+  {
+    "name": "Taylor Marks",
+    "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/614.jpg",
+    "id": "2"
+  },
+  {
+    "name": "Myra Swaniawski",
+    "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/654.jpg",
+    "id": "3"
+  },
+  {
+    "name": "Joseph McCullough",
+    "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/146.jpg",
+    "id": "4"
+  },
+  {
+    "name": "Stanley Kozey",
+    "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/567.jpg",
+    "id": "5"
+  },
+  {
+    "name": "Rosemary Gislason",
+    "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/715.jpg",
+    "id": "6"
+  },
+  {
+    "name": "Miss Ernesto Metz MD",
+    "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/1079.jpg",
+    "id": "7"
+  },
+  {
+    "name": "Mr. Dexter Dickinson",
+    "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/1007.jpg",
+    "id": "8"
+  },
+  {
+    "name": "Geneva Quitzon",
+    "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/263.jpg",
+    "id": "9"
+  },
+  {
+    "name": "Jordan Keebler III",
+    "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/603.jpg",
+    "id": "10"
+  },
+  {
+    "name": "Ricardo Schinner",
+    "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/956.jpg",
+    "id": "11"
+  },
+  {
+    "name": "Melissa Schowalter",
+    "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/1096.jpg",
+    "id": "12"
+  },
+  {
+    "name": "Geoffrey Denesik",
+    "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/568.jpg",
+    "id": "13"
+  },
+  {
+    "name": "Blanche Carroll",
+    "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/1201.jpg",
+    "id": "14"
+  },
+  {
+    "name": "Caroline Stoltenberg",
+    "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/736.jpg",
+    "id": "15"
+  },
+  {
+    "name": "Erica Windler MD",
+    "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/691.jpg",
+    "id": "16"
+  },
+  {
+    "name": "Mona Towne",
+    "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/869.jpg",
+    "id": "17"
+  },
+  {
+    "name": "Norma Hoeger III",
+    "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/676.jpg",
+    "id": "18"
+  },
+  {
+    "name": "Dr. Myrtle Wisozk",
+    "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/930.jpg",
+    "id": "19"
+  },
+  {
+    "name": "Keith Wisoky",
+    "avatar": "https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/921.jpg",
+    "id": "20"
+  }
+
+  ]
+  document.write("<table border='1' cellspacing='5' cellpadding='7' text-align='center'>");
+        for(let i=0;i<prod.length;i++){
+            document.write("<tr>")
+            document.write('<td>'+prod[i].name+''+'</td>');
+            document.write('<td>'+prod[i].id+''+'</td>');
+            document.write(`<td><img src=${prod[i].avatar}></td>`)
+            document.write("</tr>");
+        }
+            document.write("</table>");
+    </script>
+</body>
+</html>

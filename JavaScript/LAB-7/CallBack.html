@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CALLBACK FXN</title>
+</head>
+<body>
+    <script>
+        function abc(){
+            document.write("Hello0000000000000000")
+            document.write('<br/>')
+        }
+        function def(){
+            document.write("Darshan")
+            document.write('<br/>')
+        }
+        //paramterized function
+        function kem(n1,n2,callback){
+            document.write(n1+n2);
+            document.write('<br/>')
+            document.write("Sum was");
+            document.write('<br/>')
+            callback();
+        }
+        //default function
+        function kem(n1=30,n2=40){
+            document.write(n1+n2);
+            document.write('<br/>')
+            document.write("Sum was");
+            document.write('<br/>')
+            callback();
+        }
+
+        // kem(10,20,abc);
+        kem();
+    </script>
+</body>
+</html>

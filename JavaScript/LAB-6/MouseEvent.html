@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mouse Event</title>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <style>
+        body{
+            /* background-color: black; */
+        }
+        button{
+            padding: 10px 20px;
+            margin: 1%;
+            border: 5px solid black;
+            border-radius: 50px;
+            color: aqua;
+            box-shadow: -8px -8px -15px rgba(255, 255, 255, 0.1), 5px 5px 15px rgba(0, 0, 0, 0.1);
+            background-color: black;
+            text-size-adjust: 10px;
+        }
+    </style>
+</head>
+<body>
+    <button onclick="sclick()">click on this button please !!!!!</button><br>
+    <button ondblclick="dbclick()">click on this button please !!!!!</button><br>
+    <button onmouseover="overclick()">click on this button please !!!!!</button><br>
+    <button onmouseup="upclick()">click on this button please !!!!!</button><br>
+    <button onmousedown="dnclick()">click on this button please !!!!!</button><br>
+    <button onmouseout="outclick()">click on this button please !!!!!</button><br>
+    <button onmousemove="moveclick()">click on this button please !!!!!</button>
+
+    <script>
+        function sclick() {
+            
+            // alert("you clicked on single click button");
+        }
+        function dbclick() {
+            alert("you clicked on double click button");
+        }
+        function overclick() {
+            alert("you clicked on mouse over button");
+        }
+        function upclick() {
+            alert("you clicked on mouse up button");
+        }
+        function dnclick() {
+            alert("you clicked on mouse down button");
+        }
+        function outclick() {
+            alert("you clicked on mouse out button");
+        }
+        function moveclick() {
+            alert("you clicked on mouse move button");
+        }
+
+             
+    </script>
+
+</body>
+</html>

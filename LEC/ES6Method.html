@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>ES6</title>
+</head>
+<body>
+	<script type="text/javascript">
+		arr = [8.3,6.6,2.,9.1,9.9,9.2,4.5,6.8]
+
+		//include fxn doesn't need any function in its paranthesis
+		// ans = arr.includes(8);
+
+		// ans = arr.find((temp)=>{
+		// 	if(temp > 9){//it returns first occurence
+		// 		return true;
+		// 	}else{
+		// 		return false;
+		// 	}
+		// })
+
+		// ans = arr.filter((temp)=>{
+		// 	if(temp > 9){//it returns array
+		// 		return true;
+		// 	}else{
+		// 		return false;
+		// 	}
+		// })
+
+		// ans = arr.filter(temp=>temp>8)
+		// console.log("Ans",ans)
+
+
+		let fac =[
+				{
+					'name':'Darshan',
+					'exp': 'years'
+				},
+				{
+					'name':'Darshan',
+					'exp': 'years'
+				},
+				{
+					'name':'Darshan',
+					'exp': 'years'
+				},
+				{
+					'name':'Prem',
+					'exp': '18'
+				},			
+			];
+		// ans = fac.find((f)=>{
+		// 	if(f.name.toLowerCase().indexOf('prem')>-1){
+		// 		return true;
+		// 	}
+		// 	else{
+		// 		return false;
+		// 	}
+		// })
+
+		// ans = fac.find((f)=>f.name.toLowerCase().indexOf('prem')>-1)
+
+		ans = fac.some((f)=>{
+			return (f.name.toLowerCase().indexOf('m')>-1)
+				
+		})
+		console.log("Ans",ans)
+	</script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Spread Operation</title>
+</head>
+<body>	
+	<script type="text/javascript">
+		// studentBasic = {
+		// 	name:'prem',
+		// 	age:123,
+		// 	dept:'CSE',
+		// 	roll:23
+		// }
+
+		// studentContact = {
+		// 	mobile:123456789,
+		// 	email:'adfa@gmail',
+		// 	address:'afdafasdgasd a fa',
+		// 	city:'rajkot'
+		// }
+
+		// studentParent = {
+		// 	parentMobile:456789,
+		// 	parentEmail:'pore@gmail'
+		// }
+
+		// //Spread Operation Method is called by three(...) before function calling
+		// student = {
+		// 	...studentBasic,
+		// 	...studentParent,
+		// 	...studentContact
+		// }
+		// console.log(student)
+
+
+		student1 = {
+			name:'arjun',
+			dept:'CSE',
+			Clg:'Diet',
+			sem:3
+		}
+		//copying student1 in student2 by using spread operator
+		//if(...) is in lhs then it is known as SPREAD operator
+		student2 = {...student1, name:'new darshan'};
+		// student2.name = 'bala';
+		console.log("Old",student1)
+		console.log("New",student2)
+
+	</script>
+</body>
+</html>

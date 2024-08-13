@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>CRUD</title>
+	<style>
+		#result{
+			color:red;
+			float: right;
+		}
+		#form{
+			float: left;
+		}
+	</style>
+</head>
+<body>
+	<div id="form">
+		<input type="" id="txtName">		
+		<br>
+		<button onclick="addStudent()">Add</button>
+	</div>
+
+	<div id="result">
+		
+	</div>
+
+	<script type="text/javascript">
+		students = ['prem','darshan','shah']
+		
+		function displayStudentName() {
+		temp = document.getElementById('result');
+	    tempString = "";
+	    tempString += "<table border 1>"
+		  for(i=0;i<students.length;i++){
+    			tempString += "<tr>"
+    			tempString+= "<td>"+students[i]+"</td>"
+    			tempString+="<td> <button onclick='deleteStudent("+i+")'>Delete</button><td>"
+    			tempString+="<td> <button onclick='setStudent("+i+")'>Edit</button><td>"
+                tempString+= "</tr>"
+		    }
+		tempString+= "</table>"
+		temp.innerHTML = tempString;
+	}
+		displayStudentName();
+		
+		function addStudent() {
+			tempStudent = document.getElementById("txtName");
+			if(tempStudent.)
+			if(ifToEdit>=0){
+				students[ifToEdit] = tempStudent.value;
+				ifToEdit=-1;
+				document.getElementById('btn').innerHTML = 'Add'
+			}else{
+				students.push(tempStudent.value);
+			}
+			students.push(tempStudent.value);
+            tempStudent.value = "";
+			displayStudentName();
+		}
+
+		function setStudent(id){
+			ifToEdit = id;
+			document.getElementById('btn').innerHTML = "Edit";
+			document.getElementById('txtName').value = students[id]
+		}
+
+        function deleteStudent(id){
+        	temp = confirm("Are u sure u want to delete : ")
+        	if(temp){
+        		students.splice(id,1);
+        		displayStudentName();
+        	}
+        }
+	</script>
+</body>
+</html>

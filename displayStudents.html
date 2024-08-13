@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display Student</title>
+</head>
+<body>
+    <script>
+        let students = [
+            {
+                "Fname":"FName",
+                "Sname":"SName",
+                "Enrollment":"Enrollment",
+                "CPI":"CPI"
+            },
+            {
+                "Fname":"Prem",
+                "Sname":"Shah",
+                "Enrollment":"230101010",
+                "CPI":"9.84"
+            },
+            {
+                "Fname":"Jigar",
+                "Sname":"Vadukar",
+                "Enrollment":"230101010",
+                "CPI":"9.84"
+            },
+            {
+                "Fname":"Neel",
+                "Sname":"Gohel",
+                "Enrollment":"230101010",
+                "CPI":"9.84"
+            },
+            {
+                "Fname":"Het",
+                "Sname":"Bhuva",
+                "Enrollment":"230101010",
+                "CPI":"9.84"
+            },
+            {
+                "Fname":"Yashraj",
+                "Sname":"Dodia",
+                "Enrollment":"230101010",
+                "CPI":"9.84"
+            },
+        ]
+        document.write("<table border='1' cellspacing='5' cellpadding='7' text-align='center'>");
+        for(let i=0;i<students.length;i++){
+            document.write("<tr>")
+            document.write('<td>'+students[i].Fname+''+'</td>');
+            document.write('<td>'+students[i].Sname+''+'</td>');
+            document.write('<td>'+students[i].Enrollment+''+'</td>');
+            document.write('<td>'+students[i].CPI+''+'</td>');
+            document.write("</tr>");
+        }
+            document.write("</table>");    
+    </script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pattern</title>
+</head>
+<body>
+    <script>
+        let n = 5;
+        document.write("Pattern 1 (Stars):"+'<br>');
+        for(let i=0;i<=5;i++){
+            for(let j=0;j<i;j++){
+                document.write(' '+"*");
+            }
+            document.write('<br>');
+        }
+        document.write('<br>')
+        let a=1;
+        document.write("Pattern 2 (Numbers):");
+        for(let i=0;i<=5;i++){
+            for(let j=4;j>1;j){
+                document.write(' '+a);
+                a++;
+            }
+            document.write('<br>');
+        }
+        // document.write('<br><br>');
+        // document.write("Pattern 3 (Pyramid):"+'<br>');
+        //     for(var i=1; i<=5; i++)
+        //     {
+        //         for(var k=1; k<=( row5-i ); k++)
+        //     {
+        //         document.write(" ");
+        //     }
+        //     for(var j=1; j<=i; j++)
+        //     {
+        //         document.write("* ");
+        //     }
+        //     document.write("<br/>");
+        // }
+
+    </script>
+</body>
+</html>

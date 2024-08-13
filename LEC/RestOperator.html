@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Rest Operatoe</title>
+</head>
+<body>
+	<script type="text/javascript">
+		student1 = {
+			name:'bala',
+			college:'darshan',
+			dept:'CSE',
+			sem:3
+		}
+		//if(...) is in rhs then it is known as REST operator
+		let {name,college,...other} = student1
+
+		console.log(name);
+		console.log(college);
+		console.log(other);
+	</script>
+</body>
+</html>

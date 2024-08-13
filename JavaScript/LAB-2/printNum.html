@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Print Numbers</title>
+</head>
+<body>
+    <script>
+        let n = prompt("Enter number upto 3 digit")
+        if(n==null){
+            console.log("Empty String");
+        }
+        else if(isNaN(n)){
+            console.log("Invalid input");
+        }
+        else if(n<0 || n>999){
+            console.log("Out of Range");
+        }
+        else{
+            var unit = ['zero', 'one','two','three','four','five','six','seven','eight','nine']
+            var tens = ['','','twenty', 'thirty', 'forty', 'fifty','sixty','seventy','eighty','ninety','hundered']
+            var teen = ['Ten', 'eleven','twelve','thirteen','fourteen','fifteen','sixteen','seventeen','eighteen','ninteen','twenty'];
+            var res ='';
+            if(n>=100){
+                res+=unit[Math.floor(n/100)]+'hundered';
+                n%=100;
+            }
+            if(n>=20){
+                res+=tens[Math.floor(n/10)];
+                n%=10;
+            }
+            else if(n>=10){
+                res+=teen[n-10];
+                n=0;
+            }
+            if(n>0){
+                res+=unit[n]
+            }
+        }
+        document.write("Number is : "+res.trim());
+    </script>
+</body>
+</html>

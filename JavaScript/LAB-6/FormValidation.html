@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Validation Form</title>
+</head>
+<body>
+    <form action="">
+        <table border="2" style="text-align: center;background-color: black;color: white;">
+            <tr>   
+                <td>Name:</td>
+                <td><input type="text" name="name" id="name"></td>
+            </tr>
+            <tr>
+                <td>Date Of Birth:</td>
+                <td><input type="date" name="age" id="age"></td>
+            </tr>
+            <tr>
+                <td>Enrollment Number:</td>
+                <td><input type="number" name="enrollment" id="enrollment"></td>
+            </tr>
+            <tr>
+                <td>Email Id:</td>
+                <td><input type="email" name="email" id="email"></td>
+            </tr>
+            <tr>
+                <td>Phone Number:</td>
+                <td><input type="tel" name="phone" id="phone"></td>
+            </tr>
+            <tr>
+                <td>Password:</td>
+                <td><input type="password" name="password" id="pass"></td>
+            </tr>
+            <tr>
+                <td>Re-Enter Password:</td>
+                <td><input type="password" name="password" id="rpass"></td>
+            </tr>
+            <tr>
+                <td colspan="2"><button onclick="check()">Submit</button></td>
+            </tr>
+        </table>
+    </form>
+
+    <script>
+        let n = document.getElementById('name');
+        let en = document.getElementById('enrollment');
+        let em = document.getElementById('email');
+        let ph = document.getElementById('phone');
+        let pwd = document.getElementById('pass');
+        let rpwd = document.getElementById('rpass');
+
+
+        function check(){
+            validation();
+            calAge();
+        }
+
+        //Date() is inbuilt function
+        function calAge(){
+            let dob = new Date(document.getElementById('age').value);
+            let today = new Date();
+            let age = today.getFullYear() - dob.getFullYear();
+
+            if (age<18) {
+                alert("Chal foot nikkadd")
+            }
+
+            document.getElementById("age").innerHTML = age;
+
+        }
+
+        function validation(){
+            let namepattern = /^[a-zA-Z]{8,}$/
+            let enrollpattern = /^2301[0,9]{7}$/
+            let empattern = /^[a-zA-Z0-9]+@[a-zA-Z]+\.[a-zA-Z]{2}$/
+            let phpattern = /^[0-9]{10}$/
+            let ppattern = /^(?=.*[a-zA-Z])(?=.*[0-9])(?=.*[!@#$%^&*]).{8,12}$/
+
+            if(!namepattern.test(n.value)){
+                alert("Name is not valid");
+            }
+            if(!enrollpattern.test(en.value)){
+                alert("Invalid Enrollment Number");
+            }
+            if(!empattern.test(em.value)){
+                alert("Invalid E-mail Id");
+            }
+            if(!ppattern.test(pwd.value)){
+                alert("Enter valid Password");
+            }
+            if(!phpattern.test(ph.value)){
+                alert("Enter valid mobile number");
+            }
+            if(pwd.value != rpwd.value){
+                alert("Not valid");
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+[
+    {
+        "name" : "Prem",
+        "enroll" :  1234,
+        "email" : "prem@1234"
+    },
+    {
+        "name" : "Neel",
+        "enroll" :  1235,
+        "email" : "neel@1235"
+    },
+
+    {
+        "name" : "Jigar",
+        "enroll" :  124,
+        "email" : "jigar@124"
+    },
+    {
+        "name" : "Bhuvo",
+        "enroll" :  125,
+        "email" : "bhuvo@125"
+    }
+]

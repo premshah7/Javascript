@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vowel Finder</title>
+</head>
+<body>
+    <h1>Vowel Finder</h1>
+    <input type="text" id="word" value="ajanta">
+    <button onclick="findVowel()">Find</button>
+    <div id="result"></div>
+
+    <script>
+            let word = document.getElementById("word").value.toLowerCase();
+            let firstOccurrence = word.indexOf("a");
+            let lastOccurrence = word.lastIndexOf("a");
+
+            if (firstOccurrence!= -1 && lastOccurrence!= -1) {
+                let substring = word.substring(firstOccurrence, lastOccurrence + 1);
+                document.getElementById("result").innerHTML = `First occurrence of "a": ${firstOccurrence + 1}<br>Last occurrence of "a": ${lastOccurrence + 1}<br>String between them: ${substring.substring(1)}`;
+            } else {
+                document.getElementById("result").innerHTML = "No 'a' found in the word.";
+            }
+        
+    </script>
+</body>
+</html>

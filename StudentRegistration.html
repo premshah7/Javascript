@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+</head>
+
+<body>
+    <form>
+        <h1 align="center">Student Registration</h1>
+        <table align="center" cellspacing="20">
+            <tr>
+                <td>Full Name</td>
+                <td><input type="text" id="name" placeholder="Enter name"></td>
+            </tr>
+            <tr>
+                <td>Email :</td>
+                <td><input type="text" id="email"></td>
+            </tr>
+            <tr>
+                <td>Mobile No</td>
+                <td><input type="text" size="10" id="mobile"></td>
+            </tr>
+            <tr>
+                <td>Address</td>
+                <td><textarea name="text" rows="5" cols="5"></textarea></td>
+            </tr>
+            <tr>
+                <td>Password</td>
+                <td><input type="text" id="password"></td>
+            </tr>
+
+
+            <tr>
+                <td><button onclick="validation()">submit</button></td>
+            </tr>
+        </table>
+    </form>
+
+    <script>
+        let n = document.getElementById('name');
+        let en = document.getElementById('enrollment');
+        let em = document.getElementById('email');
+        let ph = document.getElementById('phone');
+        let pwd = document.getElementById('pass');
+        let rpwd = document.getElementById('rpass');
+
+
+        function check(){
+            validation();
+            calAge();
+        }
+
+        //Date() is inbuilt function
+        function calAge(){
+            let dob = new Date(document.getElementById('age').value);
+            let today = new Date();
+            let age = today.getFullYear() - dob.getFullYear();
+
+            if (age<18) {
+                alert("Chal foot nikkadd")
+            }
+
+            document.getElementById("age").innerHTML = age;
+
+        }
+
+        function validation(){
+            let namepattern = /^[a-zA-Z]{8,}$/
+            let enrollpattern = /^2301[0,9]{7}$/
+            let empattern = /^[a-zA-Z0-9]+@[a-zA-Z]+\.[a-zA-Z]{2}$/
+            let phpattern = /^[0-9]{10}$/
+            let ppattern = /^(?=.*[a-zA-Z])(?=.*[0-9])(?=.*[!@#$%^&*]).{8,12}$/
+
+            if(!namepattern.test(n.value)){
+                alert("Name is not valid");
+            }
+            if(!enrollpattern.test(en.value)){
+                alert("Invalid Enrollment Number");
+            }
+            if(!empattern.test(em.value)){
+                alert("Invalid E-mail Id");
+            }
+            if(!ppattern.test(pwd.value)){
+                alert("Enter valid Password");
+            }
+            if(!phpattern.test(ph.value)){
+                alert("Enter valid mobile number");
+            }
+            if(pwd.value != rpwd.value){
+                alert("Not valid");
+            }
+        }
+    </script>
+    <!-- <script>
+        function validation() {
+            email = "^[a-z].*@gmail\.com$"
+            email2 = document.getElementById('email').value
+            Regexp = new RegExp(email)
+            if (Regexp.test(email2)) {
+
+            }
+            else {
+                Swal.fire({
+                    icon: "error",
+                    title: "Oops...",
+                    text: "E-Mail Format is Wrong",
+                    footer: '<a href="#">Why do I have this issue?</a>'
+                });
+                return
+            }
+
+            username = "^[a-zA-Z0-9]{8,}$"
+            username2 = document.getElementById('name').value
+            Regexp2 = new RegExp(username)
+            if (Regexp2.test(username2)) {
+
+            }
+            else {
+                Swal.fire({
+                    icon: "error",
+                    title: "Oops...",
+                    text: "Invalid username",
+                    footer: '<a href="#">Why do I have this issue?</a>'
+                });
+                return
+
+            }
+
+            password = "^(?=.*\d)(?=.*[!@#$%^&*(),.?\":{}|<>])(?=.*[a-zA-Z]).{8,12}$"
+            password2 = document.getElementById('password').value
+            Regexp3 = new RegExp(password)
+            if (Regexp3.test(password2)) {
+
+            }
+            else {
+                Swal.fire({
+                    icon: "error",
+                    title: "Oops...",
+                    text: "Invalid Password",
+                    footer: '<a href="#">Why do I have this issue?</a>'
+                });
+                return
+            }
+        }
+    </script> -->
+</body>
+
+</html>

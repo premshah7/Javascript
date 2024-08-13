@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BackGround Color Change</title>
+</head>
+<body>
+    <button onclick="start()">Click to Change</button>
+    <button onclick="stp()">Click to Stop</button>
+    <script>
+        let a;
+        function change() {
+            let r = Math.random()*255;
+            let g = Math.random()*255;
+            let b = Math.random()*255;
+            document.body.style.backgroundColor = "rgb("+r+","+g+","+b+")";
+            
+            // document.body.style.backgroundColor = "red";
+        }
+        function start(){
+            // a = setInterval(change,1000)
+        }
+        function stp(){
+            clearInterval(a);
+        }
+    </script>
+</body>
+</html>

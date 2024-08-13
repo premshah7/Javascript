@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD Operation</title>
+    <style>
+        .dis{
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <tr>
+            <td>
+                <input type="text" id="txt"/>
+                <button onclick="add()" id="bt">Add</button>
+                <div id="area" class="dis"></div>
+            </td>
+        </tr>
+    </table>
+    <script>
+        var btn = document.getElementById('bt');
+        // btn.innerHTML = "Add";
+        var ar = [];
+        let index;
+        function add() {
+            if(btn.innerHTML == 'Add'){
+                ar.push(document.getElementById('txt').value);  
+                document.getElementById('txt').value = "";
+                display();
+            }
+            else{
+                let name = document.getElementById('txt')
+                ar[index] = name.value;
+                document.getElementById('txt').value = "";
+                display();
+                btn.innerHTML = "Add";
+            }
+        }
+
+        function edi(i){
+            let name = document.getElementById('txt');
+            name.value = ar[i];
+            btn.innerHTML = "Edit"
+            index = i;
+            // display();
+        }
+
+        function del(i){
+            ar.splice(i,1);
+            display();
+        }
+
+        function display(){
+            let dis = document.getElementById('area');
+            dis.innerHTML = "";
+            for(i=0;i<ar.length;i++){
+                dis.innerHTML += ar[i] + 
+                "<button onclick='del("+i+")' colspan='5'>Delete</button>" + 
+                "<button onclick='edi("+i+")'>Edit</button>" +
+                "</br>"
+            }
+        }
+    </script>
+</body>
+</html>

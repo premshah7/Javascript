@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title><meta charset="utf-8"></title>
+	<style type="text/css">
+		width:300px;
+		position:absolute;
+	</style>
+</head>
+<body>
+	<button onclick="increaceWidth()">Increase</button>
+	<button onclick="decWidth()">Decrease</button>
+	<button onclick="moveleft()">Left</button>
+	<button onclick="moveright()">Right</button>
+	<br><br><br>
+	<img src="design.jpg" id="myImg">
+
+	<script type="text/javascript">
+		currentWidth = 300;
+		currentLeft=0;
+		function increaceWidth(){
+			currentWidth +=50;
+			imgRf = document.getElementById('myImg');
+			imgRf.style.width = currentWidth+"px";
+		}
+
+		function decWidth(){
+			currentWidth -=50;
+			imgRf = document.getElementById('myImg');
+			imgRf.style.width = currentWidth+"px";	
+		}
+
+		function moveleft(){
+			currentLeft-=50;
+			imgRf = document.getElementById('myImg');
+			imgRf.style.left = currentLeft+"px"
+		}
+
+		function moveright(){
+			currentLeft+=50;
+			imgRf = document.getElementById('myImg');
+			imgRf.style.left = currentLeft+"px"
+		}
+	</script>
+</body>
+</html>
