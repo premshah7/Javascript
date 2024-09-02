@@ -14,27 +14,6 @@ app.listen(3000,()=>{
 })
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 //getByAll
 app.get('/students' , (req,res)=>{
     res.send(students);
