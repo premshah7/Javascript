@@ -2,6 +2,7 @@ const express = require('express');
 const bodyParser = require('body-parser')
 const mongoose = require('mongoose');
 const students = require('./stinfo');
+const cors = require('cors');
 
 mongoose.connect("mongodb+srv://Prem_7:Prem%40123@cluster0.2zd61.mongodb.net/Stu_Info")
     .then( ()=>{
@@ -9,6 +10,7 @@ mongoose.connect("mongodb+srv://Prem_7:Prem%40123@cluster0.2zd61.mongodb.net/Stu
         const app = express();
         app.use(express.json())
         app.use(bodyParser.urlencoded({extended:false}));
+        app.use(cors());    
 
 
         app.get('/students',async (req,res)=>{
@@ -17,7 +19,7 @@ mongoose.connect("mongodb+srv://Prem_7:Prem%40123@cluster0.2zd61.mongodb.net/Stu
         });
 
         //GET_ELEMENT_BY_ENROLL_NUMBER
-        app.get('/students/:enroll',async (req,res)=>{
+        app.get('/students/:id',async (req,res)=>{
             const ans = await students.findOne({enroll:req.params.enroll});
             res.send(ans);
         });
@@ -42,7 +44,7 @@ mongoose.connect("mongodb+srv://Prem_7:Prem%40123@cluster0.2zd61.mongodb.net/Stu
             const ans = await students.deleteOne({enroll:req.params.enroll});
             res.send(ans)
         })
-        app.listen(3000,()=>{
-            console.log("Server is running on port 3000");
+        app.listen(5000,()=>{
+            console.log("Server is running on port 5000");
         })
     })
